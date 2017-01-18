@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="slimpay.client" class="SlimpayBundle\Services\SlimpayClient">
+            <argument>%slimpay.apiurl%</argument>
+            <argument>%slimpay.entry_point_url%</argument>
+            <argument>%slimpay.profile%</argument>
+            <argument>%slimpay.token_end_point_url%</argument>
+            <argument>%slimpay.oauth_user_id%</argument>
+            <argument>%slimpay.oauth_password%</argument>
+            <argument>%slimpay.rel_namespace%</argument>
+            <argument type="service" id="slimpay.entity_factory" />
+            <argument type="service" id="event_dispatcher" />
+        </service>
+
+        <service id="slimpay.entity_factory" class="SlimpayBundle\Services\EntityFactory">
+        </service>
+    </services>
+</container>

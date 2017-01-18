@@ -1,0 +1,27 @@
+slimpay_notification:
+    pattern:  /slimpay/notification
+    defaults: { _controller: SlimpayBundle:Notification:slimpayNotification}
+
+slimpay_test_entry_point:
+    pattern:  /slimpay/entry_point
+    defaults: { _controller: SlimpayBundle:Test:testEntryPointResource}
+
+slimpay_test_create_mandate:
+    pattern:  /slimpay/create_mandate
+    defaults: { _controller: SlimpayBundle:Test:testCreateMandate}
+
+slimpay_test_get_mandates:
+    pattern:  /slimpay/get_mandates
+    defaults: { _controller: SlimpayBundle:Test:testGetMandates}
+
+slimpay_test_direct_order:
+    pattern:  /slimpay/create_direct_order
+    defaults: { _controller: SlimpayBundle:Test:testCreateDirectOrder}
+
+slimpay_test_get_direct_debit:
+    pattern:  /slimpay/get_direct_debit
+    defaults: { _controller: SlimpayBundle:Test:testGetDirectDebits}
+
+slimpay_test_get_orders:
+    pattern:  /slimpay/get_orders
+    defaults: { _controller: SlimpayBundle:Test:testGetOrders}
