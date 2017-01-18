@@ -2,12 +2,6 @@
 
 namespace SlimpayBundle\Entity;
 
-/**
- * Debit
- *
- * @ORM\Table(name="slimpay_debit")
- * @ORM\Entity
- */
 class Debit
 {
 
