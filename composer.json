@@ -1,0 +1,35 @@
+{
+  "name": "touiliy/slimpay-bundle",
+  "type": "symfony-bundle",
+  "description": "This bundle allows you make calls to Slimpay REST api.",
+  "keywords": ["Symfony3", "bundle", "slimpay"],
+  "homepage": "https://github.com/touiliy/slimpay-bundle",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Sylvain Vuidart",
+      "email": "sylvain@copromatic.com"
+    },
+    {
+      "name": "Yannis Touili",
+      "email" : "yannis@copromatic.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.2",
+    "symfony/framework-bundle": "~2.7|~3.0",
+    "slimpay/hapiclient": "1.0.*"
+  },
+  "require-dev": {
+    "symfony/phpunit-bridge": "~2.7|~3.0"
+  },
+  "autoload":     {
+    "psr-4": { "Lexik\\Bundle\\MaintenanceBundle\\": "" }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
+}
