@@ -7,6 +7,7 @@
             <argument>%slimpay.entry_point_url%</argument>
             <argument>%slimpay.profile%</argument>
             <argument>%slimpay.token_end_point_url%</argument>
+            <argument>%slimpay.creditor_reference%</argument>
             <argument>%slimpay.oauth_user_id%</argument>
             <argument>%slimpay.oauth_password%</argument>
             <argument>%slimpay.rel_namespace%</argument>
