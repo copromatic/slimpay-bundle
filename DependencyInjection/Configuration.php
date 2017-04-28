@@ -15,6 +15,7 @@ class Configuration implements ConfigurationInterface {
         $rootNode
             ->children()
                 ->scalarNode('apiUrl')->end()
+                ->scalarNode('webUrl')->end()
                 ->scalarNode('entryPointUrl')->end()
                 ->scalarNode('profile')->end()
                 ->scalarNode('tokenEndPointUrl')->end()

@@ -17,5 +17,12 @@
 
         <service id="slimpay.entity_factory" class="SlimpayBundle\Services\EntityFactory">
         </service>
+
+        <service id="slimpay.twig_extension"
+                 class="SlimpayBundle\Twig\Extensions\Slimpay"
+                 public="true">
+            <argument>%slimpay.weburl%</argument>
+            <tag name="twig.extension" />
+        </service>
     </services>
 </container>
