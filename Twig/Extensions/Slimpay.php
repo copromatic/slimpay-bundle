@@ -22,22 +22,24 @@ class Slimpay extends \Twig_Extension {
     }
 
     public function getMandateFromReference(\Twig_Environment $environment, string $reference, $styleTab = ['width' => '70px']) {
-        $toReturn = substr($reference, 4);
-        $counter = 0;
-        $referenceSplitted = str_split($reference);
-        while ($referenceSplitted[$counter] == '0') {
-            $counter++;
+        if ($reference && $toReturn = substr($reference, 4) == 'SLMP') {
+            $counter = 0;
+            $referenceSplitted = str_split($reference);
+            while ($referenceSplitted[$counter] == '0') {
+                $counter++;
+            }
+            $toReturn = substr($toReturn, $counter);
+            $link = $this->baseBrowserUri.'/client/manageMandate.html?mandateid='.$toReturn;
+            $style = '';
+            foreach ($styleTab as $rule => $value) {
+                $style .= $rule.': '.$value.';';
+            }
+            return $environment->render('@Slimpay/link.html.twig', [
+                'link'  => $link,
+                'style' => $style
+            ]);
         }
-        $toReturn = substr($toReturn, $counter);
-        $link = $this->baseBrowserUri.'/client/manageMandate.html?mandateid='.$toReturn;
-        $style = '';
-        foreach ($styleTab as $rule => $value) {
-            $style .= $rule.': '.$value.';';
-        }
-        return $environment->render('@Slimpay/link.html.twig', [
-            'link'  => $link,
-            'style' => $style
-        ]);
+        return 'Pas de mandat Slimpay';
     }
 
     public function getName() {
