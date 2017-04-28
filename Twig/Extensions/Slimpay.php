@@ -21,11 +21,11 @@ class Slimpay extends \Twig_Extension {
         ];
     }
 
-    public function getMandateFromReference(\Twig_Environment $environment, string $reference, $styleTab = ['width' => '70px']) {
+    public function getMandateFromReference(\Twig_Environment $environment, $reference, $styleTab = ['width' => '70px']) {
         if ($reference && substr($reference, 0, 4) == 'SLMP') {
             $toReturn = substr($reference, 4);
             $counter = 0;
-            $referenceSplitted = str_split($reference);
+            $referenceSplitted = str_split($toReturn);
             while ($referenceSplitted[$counter] == '0') {
                 $counter++;
             }
