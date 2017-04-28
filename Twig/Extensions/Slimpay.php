@@ -12,7 +12,7 @@ class Slimpay extends \Twig_Extension {
 
     public function getFunctions() {
         return [
-            new \Twig_SimpleFunction('linkMandate', [$this, 'getMandateFromReference'],
+            new \Twig_SimpleFunction('slimpayLinkMandate', [$this, 'getMandateFromReference'],
                 [
                     'needs_environment' => true,
                     'is_safe'           => ['html'  => true]
