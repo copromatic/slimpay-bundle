@@ -33,6 +33,7 @@ class SlimpayClient
 
     const CREATE_DIRECT_DEBITS = 'create-direct-debits';
     const GET_DIRECT_DEBITS = 'get-direct-debits';
+    const SEARCH_DIRECT_DEBITS = 'search-direct-debits';
     const CREATE_RECURRENT_DIRECT_DEBITS = 'create-recurrent-direct-debits';
     const GET_RECURRENT_DIRECT_DEBITS = 'get-recurrent-direct-debits';
     const GET_DIRECT_DEBIT_ISSUES = 'get-direct-debit-issues';
@@ -329,6 +330,15 @@ class SlimpayClient
         $this->eventDispatcher->dispatch(DebitEvent::DEBIT_CREATED, $event);
 
         return $resource;
+    }
+    
+    /**
+     * @param $params
+     * @return Resource
+     */
+    public function searchDirectDebits($params)
+    {
+        return $this->get(self::SEARCH_DIRECT_DEBITS, $params);
     }
 
     /**
