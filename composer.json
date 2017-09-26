@@ -1,5 +1,5 @@
 {
-  "name": "touiliy/slimpay-bundle",
+  "name": "copromatic/slimpay-bundle",
   "type": "symfony-bundle",
   "description": "This bundle allows you make calls to Slimpay REST api.",
   "keywords": ["Symfony3", "bundle", "slimpay"],
